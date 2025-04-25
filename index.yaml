@@ -3,12 +3,12 @@ entries:
   hello-world:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-04-25T06:51:31.264806588+03:00"
+    created: "2025-04-25T06:54:31.415106335+03:00"
     description: A simple Hello World Helm chart for Kubernetes
     digest: a3e7ac1bdb7d115f59dc40e63eb9faae20a527a22e68f8f4d71b8c37a88c5da3
     name: hello-world
     type: application
     urls:
-    - https://github.com/thezzer/helm-hello/hello-world-0.1.0.tgz
+    - https://thezer.github.com/helm-hello/hello-world-0.1.0.tgz
     version: 0.1.0
-generated: "2025-04-25T06:51:31.264550664+03:00"
+generated: "2025-04-25T06:54:31.414836864+03:00"
