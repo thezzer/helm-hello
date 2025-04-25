@@ -1,0 +1,42 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "hello-world.fullname" . }}-html
+  labels:
+    {{- include "hello-world.labels" . | nindent 4 }}
+spec:
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Hello from Helm!</title>
+      <style>
+        body {
+          font-family: Arial, sans-serif;
+          text-align: center;
+          padding-top: 100px;
+          background-color: #f8f9fa;
+        }
+        h1 {
+          color: #3498db;
+        }
+        .container {
+          max-width: 800px;
+          margin: 0 auto;
+          background: white;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <h1>Hello World!</h1>
+        <p>This page is served from a custom Helm chart.</p>
+        <p>Chart version: {{ .Chart.Version }}</p>
+        <p>App version: {{ .Chart.AppVersion }}</p>
+      </div>
+    </body>
+    </html>
